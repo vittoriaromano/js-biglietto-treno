@@ -34,7 +34,7 @@ const costo = '0.21'
 let prezzo = `${distanza} * ${costo} = ${distanza * costo}`
 console.log(prezzo);
 
-document.querySelector('div').innerHTML = `prezzo ${distanza * costo}`;
+document.querySelector('div').innerHTML = `prezzo ${(distanza * costo).toFixed(2)}`;
 
 //sconto per minori e senior
 
@@ -48,14 +48,14 @@ if(anni < 18){
     let prezzoScontato = `${distanza} * ${costo} * ${scontoMinore} = ${distanza * costo * scontoMinore}`;
     console.log(prezzoScontato)
 
-    document.querySelector('div').innerHTML = `prezzo ${distanza * costo * scontoMinore}`.toFixed(2);
+    document.querySelector('div').innerHTML = `prezzo ${(distanza * costo * scontoMinore).toFixed(2)}`;
 }//Se l'eta inserita e' maggiore/uguale di 65
   //calcola prezzoScontato = prezzo - (prezzo / 100 * 40)
    else if(anni >= 65){
     let prezzoScontato = `${distanza} * ${costo} * ${scontoSenior} = ${distanza * costo * scontoSenior}`;
     console.log(prezzoScontato)
 
-    document.querySelector('div').innerHTML = `prezzo ${distanza * costo * scontoSenior}`
+    document.querySelector('div').innerHTML = `prezzo ${(distanza * costo * scontoSenior).toFixed(2)}`
 }
 
 
