@@ -48,7 +48,7 @@ if(anni < 18){
     let prezzoScontato = `${distanza} * ${costo} * ${scontoMinore} = ${distanza * costo * scontoMinore}`;
     console.log(prezzoScontato)
 
-    document.querySelector('div').innerHTML = `prezzo ${distanza * costo * scontoMinore}`
+    document.querySelector('div').innerHTML = `prezzo ${distanza * costo * scontoMinore}`.toFixed(2);
 }//Se l'eta inserita e' maggiore/uguale di 65
   //calcola prezzoScontato = prezzo - (prezzo / 100 * 40)
    else if(anni >= 65){
